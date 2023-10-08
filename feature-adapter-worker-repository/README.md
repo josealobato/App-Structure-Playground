@@ -1,9 +1,9 @@
 # Initial requirements
 
-Build an application that fetches data from this API - [https://randomuser.me](https://randomuser.me/) - and displays a list of Users. 
-The application should fetch multiple pages of Users from that API and display a list of Users with first and last names on one line and the email below. 
-Following pages should be fetched when users scroll the list. 
-Finally, while offline, previously loaded Users should still be accessible from the list. 
+* Build an application that fetches data from this API - [https://randomuser.me](https://randomuser.me/) - and displays a list of Users. 
+* The application should fetch multiple pages of Users from that API and display a list of Users with first and last names on one line and the email below. 
+The following pages should be fetched when users scroll the list. 
+* Finally, while offline, previously loaded Users should still be accessible from the list. 
 
 # Comments on the implementation
 
