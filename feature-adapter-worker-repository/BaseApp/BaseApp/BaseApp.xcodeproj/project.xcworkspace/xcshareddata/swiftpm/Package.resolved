@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "connectivity",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/rwbutler/connectivity",
+      "state" : {
+        "revision" : "baf392cd229138c268e5dbaf3ee84e6ae0876173",
+        "version" : "6.1.1"
+      }
+    },
+    {
+      "identity" : "coredatastack",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/janodevorg/CoreDataStack",
+      "state" : {
+        "revision" : "46745fa4adcdbbc287e7ce46ce6cb6c27ac11d6e",
+        "version" : "1.0.4"
+      }
+    }
+  ],
+  "version" : 2
+}

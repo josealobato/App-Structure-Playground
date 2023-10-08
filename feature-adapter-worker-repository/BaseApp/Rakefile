@@ -1,0 +1,47 @@
+
+task :default do
+  puts "Run `rake -T` to learn about the available actions."
+end
+
+desc "Generate mocks. Needs `brew install sourcery`."
+task :mocks do
+  # $ ./bin/sourcery --sources <sources path> --templates <templates path> --output <output path>
+  command = <<-eos
+    sourcery \
+      --sources ./BaseApp/Packages/Feature/Sources \
+      --templates ./BaseApp/Templates/AutoMockable.stencil \
+      --args testimports="@testable import Feature; import Entities;" \
+      --output ./BaseApp/Packages/Feature/Tests/FeatureTests/Generated/AutoMockable.generated.swift
+    eos
+    system(command)
+    command = <<-eos
+    sourcery \
+      --sources ./BaseApp/Packages/UsersCollection/Sources \
+      --templates ./BaseApp/Templates/AutoMockable.stencil \
+      --args testimports="@testable import UsersCollection; import Entities;" \
+      --output ./BaseApp/Packages/UsersCollection/Tests/UsersCollectionTests/Generated/AutoMockable.generated.swift
+    eos
+    system(command)
+    command = <<-eos
+    sourcery \
+      --sources ./BaseApp/Packages/Repositories/Sources \
+      --templates ./BaseApp/Templates/AutoMockable.stencil \
+      --args testimports="@testable import Repositories; " \
+      --output ./BaseApp/Packages/Repositories/Tests/RepositoriesTests/Generated/AutoMockable.generated.swift
+    eos
+    system(command)
+end
+
+desc "Run Unit Test on packages (WIP)."
+task :ut do
+  packages = ["QueueManagementService", "QueueManagementService"]
+  packages.each do |package|
+    puts package
+    command = <<-eos
+    set -oe pipefail && xcodebuild test -workspace #{package} -scheme $$scheme  -configuration Debug -destination $(destination) | xcpretty ; 
+    xcodebuild test -scheme #{package} -sdk iphonesimulator15.0 -destination "OS=15.0,name=iPhone 13 Mini"
+    eos
+    system(command)
+  end
+end
+
