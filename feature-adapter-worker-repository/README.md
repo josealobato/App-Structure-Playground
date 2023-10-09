@@ -51,7 +51,9 @@ Features are the building blocks of the application, and they can be built inter
 
 ## Video 3: The quick data layer.
 
-Unfortunately, I do not have more space on Vimeo, so I could not upload it.
+A quick explanation of the data layer.
+
+[see the video](https://vimeo.com/872433609?share=copy)
 
 # Extra information
 
