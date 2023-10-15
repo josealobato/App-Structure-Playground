@@ -18,3 +18,7 @@ This is a project with the implementation of a coordinator entirely on SwiftUI w
 3. The Coordinator knows how to present any feature requested from any other features.
 
 Here, a `Feature` is understood as a self-contained package. Internally, that feature could be developed with VIP, MVVM, or any other pattern and will offer the interfaces (protocols) it needs to do its job. In this demo project, the features are plain SwiftUI views.
+
+## Basic SwiftUI Coordinator with TabView
+
+This second project is the same as Basic SwiftUI Coordinator (One single flow), but It starts with TabView with two independent flows.
