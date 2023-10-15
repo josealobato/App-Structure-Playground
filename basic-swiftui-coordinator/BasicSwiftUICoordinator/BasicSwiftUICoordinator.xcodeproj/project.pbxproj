@@ -12,10 +12,12 @@
 		45CCB6202ADAABF70004223D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45CCB61F2ADAABF70004223D /* Assets.xcassets */; };
 		45CCB6232ADAABF70004223D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45CCB6222ADAABF70004223D /* Preview Assets.xcassets */; };
 		45CCB62B2ADAAD8E0004223D /* AppFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CCB62A2ADAAD8E0004223D /* AppFlowCoordinator.swift */; };
-		45CCB62D2ADAAE120004223D /* AppCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CCB62C2ADAAE120004223D /* AppCoordinatorView.swift */; };
+		45CCB62D2ADAAE120004223D /* AppFlowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CCB62C2ADAAE120004223D /* AppFlowView.swift */; };
 		45CCB62F2ADAB0A90004223D /* ParentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CCB62E2ADAB0A90004223D /* ParentView.swift */; };
 		45CCB6312ADAB1F30004223D /* FirstChildView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CCB6302ADAB1F20004223D /* FirstChildView.swift */; };
 		45CCB6332ADAB2300004223D /* SecondChildView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CCB6322ADAB2300004223D /* SecondChildView.swift */; };
+		45CCB6362ADB1F2A0004223D /* CoordinatorRequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CCB6352ADB1F2A0004223D /* CoordinatorRequestProtocol.swift */; };
+		45CCB6392ADBD23B0004223D /* CreatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CCB6382ADBD23B0004223D /* CreatorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,10 +27,12 @@
 		45CCB61F2ADAABF70004223D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		45CCB6222ADAABF70004223D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		45CCB62A2ADAAD8E0004223D /* AppFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowCoordinator.swift; sourceTree = "<group>"; };
-		45CCB62C2ADAAE120004223D /* AppCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorView.swift; sourceTree = "<group>"; };
+		45CCB62C2ADAAE120004223D /* AppFlowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowView.swift; sourceTree = "<group>"; };
 		45CCB62E2ADAB0A90004223D /* ParentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentView.swift; sourceTree = "<group>"; };
 		45CCB6302ADAB1F20004223D /* FirstChildView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstChildView.swift; sourceTree = "<group>"; };
 		45CCB6322ADAB2300004223D /* SecondChildView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondChildView.swift; sourceTree = "<group>"; };
+		45CCB6352ADB1F2A0004223D /* CoordinatorRequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorRequestProtocol.swift; sourceTree = "<group>"; };
+		45CCB6382ADBD23B0004223D /* CreatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +65,8 @@
 		45CCB61A2ADAABF60004223D /* BasicSwiftUICoordinator */ = {
 			isa = PBXGroup;
 			children = (
-				45CCB6292ADAAD720004223D /* Flow */,
+				45CCB6372ADBC8590004223D /* Features */,
+				45CCB6342ADB1F130004223D /* Coordinator */,
 				45CCB61B2ADAABF60004223D /* BasicSwiftUICoordinatorApp.swift */,
 				45CCB61D2ADAABF60004223D /* ContentView.swift */,
 				45CCB61F2ADAABF70004223D /* Assets.xcassets */,
@@ -78,16 +83,33 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		45CCB6292ADAAD720004223D /* Flow */ = {
+		45CCB6292ADAAD720004223D /* Flows */ = {
 			isa = PBXGroup;
 			children = (
 				45CCB62A2ADAAD8E0004223D /* AppFlowCoordinator.swift */,
-				45CCB62C2ADAAE120004223D /* AppCoordinatorView.swift */,
+				45CCB62C2ADAAE120004223D /* AppFlowView.swift */,
+			);
+			path = Flows;
+			sourceTree = "<group>";
+		};
+		45CCB6342ADB1F130004223D /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				45CCB6292ADAAD720004223D /* Flows */,
+				45CCB6352ADB1F2A0004223D /* CoordinatorRequestProtocol.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		45CCB6372ADBC8590004223D /* Features */ = {
+			isa = PBXGroup;
+			children = (
 				45CCB62E2ADAB0A90004223D /* ParentView.swift */,
 				45CCB6302ADAB1F20004223D /* FirstChildView.swift */,
 				45CCB6322ADAB2300004223D /* SecondChildView.swift */,
+				45CCB6382ADBD23B0004223D /* CreatorView.swift */,
 			);
-			path = Flow;
+			path = Features;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,7 +186,9 @@
 				45CCB6332ADAB2300004223D /* SecondChildView.swift in Sources */,
 				45CCB61E2ADAABF60004223D /* ContentView.swift in Sources */,
 				45CCB61C2ADAABF60004223D /* BasicSwiftUICoordinatorApp.swift in Sources */,
-				45CCB62D2ADAAE120004223D /* AppCoordinatorView.swift in Sources */,
+				45CCB6362ADB1F2A0004223D /* CoordinatorRequestProtocol.swift in Sources */,
+				45CCB6392ADBD23B0004223D /* CreatorView.swift in Sources */,
+				45CCB62D2ADAAE120004223D /* AppFlowView.swift in Sources */,
 				45CCB62F2ADAB0A90004223D /* ParentView.swift in Sources */,
 				45CCB6312ADAB1F30004223D /* FirstChildView.swift in Sources */,
 			);
