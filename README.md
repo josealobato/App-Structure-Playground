@@ -8,7 +8,7 @@ This structure is based on the concept of modularity for features. Having a data
 
 (Read the README.md in that folder for more details.)
 
-## Basic SwiftUI Coordinator
+## Basic SwiftUI Coordinator (One single flow)
 
 This is a project with the implementation of a coordinator entirely on SwiftUI with just one flow. The goals are:
 
